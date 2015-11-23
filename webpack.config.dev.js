@@ -12,7 +12,7 @@ module.exports = {
   },
     entry: [
         'webpack-hot-middleware/client',
-        './src/client/index'
+        './src/index'
     ],
     output: {
         path: path.join(__dirname, 'dist'),

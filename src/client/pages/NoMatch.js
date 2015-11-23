@@ -2,15 +2,13 @@ import React,{Component} from 'react'
 import {render} from 'react-dom'
 
 export class NoMatch extends Component {
-  constructor() {
-    super()
-  }
+    constructor() {
+        super()
+    }
 
-
-  render () {
-    return(
-      <div className="notfound">404</div>
-
-    );
-  }
+    render() {
+        return (
+            <div className="notfound">4044</div>
+        );
+    }
 }

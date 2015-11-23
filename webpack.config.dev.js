@@ -4,6 +4,12 @@ var webpack = require('webpack');
 module.exports = {
     devtool: 'source-map',
     debug: true,
+    devServer: {
+    // proxy calls to api to our own node server backend
+    proxy: {
+      '/api/*': 'http://localhost:5000/'
+    },
+  },
     entry: [
         'webpack-hot-middleware/client',
         './src/client/index'

@@ -1,14 +1,16 @@
 import React,{Component} from 'react'
 import {render} from 'react-dom'
 
-export class NoMatch extends Component {
+class NoMatch extends Component {
     constructor() {
         super()
     }
 
     render() {
         return (
-            <div className="notfound">4044</div>
+            <div className="notfound">4044fef</div>
         );
     }
 }
+
+export default NoMatch;

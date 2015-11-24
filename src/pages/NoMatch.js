@@ -5,10 +5,9 @@ class NoMatch extends Component {
     constructor() {
         super()
     }
-
     render() {
-        return (
-            <div className="notfound">4044fef</div>
+        return (          
+            <div className="notfound">404</div>
         );
     }
 }

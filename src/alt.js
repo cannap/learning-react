@@ -1,2 +1,5 @@
 import Alt from 'alt';
-export default new Alt();
+const alt = new Alt();
+
+//alt.debug('alt', alt);
+export default alt;

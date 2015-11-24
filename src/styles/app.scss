@@ -1,1 +1,52 @@
-@import 'test'
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 90px;
+}
+@import 'grid';
+.text-center {
+  text-align: center;
+}
+
+.p-20 {
+  padding:20px 0;
+}
+
+a {
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    outline: none;
+    text-decoration: none;
+  }
+}
+.header {
+  background: #00BCD4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.nav-top {
+  padding: 25px 0;
+  float: right;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      a {
+        color: rgba(255,255,255,0.6);
+        &:hover {
+          color: #FFF;
+        }
+      }
+      display: inline-block;
+      margin-left: 15px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

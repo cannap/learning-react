@@ -3,10 +3,7 @@ import request from 'superagent';
 class RepoActions {
   constructor() {
 
-    this.generateActions(
-      'fetchRepos',
-      'loadingRepos'
-    )
+    this.generateActions('fetchRepos', 'loadingRepos')
   }
   fetch(repoName = 'boostrap') {
     this.actions.loadingRepos(true);
@@ -19,12 +16,7 @@ class RepoActions {
       this.actions.fetchRepos(res.body)
       this.actions.loadingRepos(false)
     });
-
-
-
-
   }
 }
-
 
 export default alt.createActions(RepoActions)

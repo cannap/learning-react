@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="container">
-          <nav className="nav-top">
+           <nav className="nav-top">
             <ul>
               <li>
                 <Link to="home">Home</Link>

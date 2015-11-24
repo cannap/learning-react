@@ -17,6 +17,4 @@ class SingleRepoActions {
 }
 
 
-
-
 export default alt.createActions(SingleRepoActions);

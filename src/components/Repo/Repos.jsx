@@ -3,19 +3,8 @@ import React, {Component} from 'react';
 import RepoActions from '../../actions/RepoActions';
 import RepoStore from '../../stores/RepoStore';
 
-
 import RepoItem from './RepoItem';
-
-
-import {
-  RaisedButton,
-  RefreshIndicator,
-  Paper,
-  TextField,
-  List,
-  Avatar,
-  ListItem
-} from 'material-ui';
+import {RaisedButton, RefreshIndicator, Paper, TextField, List, Avatar, ListItem} from 'material-ui';
 class Repos extends Component {
   constructor() {
     super();
@@ -29,17 +18,13 @@ class Repos extends Component {
     //Stay
     e.preventDefault();
     let q = this.refs.search.getValue();
-
     if (q.length !== 0) {RepoActions.fetch(q);} else {
-this.setState({
-  repos : false
-})
-      //Show Error
+      this.setState({repos: false})
+
     }
 
   }
   onChange (state) {this.setState(state);}
-
   loading () {
     if(this.state.loadingStatus) {console.log('Loading');
       return (
@@ -51,68 +36,40 @@ this.setState({
   }
 
   repos () {
-
-if(this.state.repos) {
-
-
-    return this.state.repos.items.map((repo) => {
-    return(
-
-<ListItem
-  leftAvatar={<Avatar src={repo.owner.avatar_url} />}
-   primaryText={<a href="#">repo.name</a>}
-  secondaryText={
-       <p>
-
-{repo.description}
-       </p>
-     }
-
-
-
-></ListItem>
-
-
-
-    )
-    })
-    }
+    if(this.state.repos) {return this.state.repos.items.map((repo) => {
+        return(
+          <ListItem
+              leftAvatar={<Avatar src={repo.owner.avatar_url} />}
+              primaryText={<a href="#">repo.name</a>}
+              secondaryText={<p>{repo.description}</p>}>
+          </ListItem>
+        )
+      })}
   }
 
   render () {
     return(
       <div className="container">
         {this.loading()}
-
         <Paper zDepth={1} className="text-center p-20">
-
           <form onSubmit={this.loadRepos}>
-            <TextField id="search" ref="search" placeholder="Hint Text"/>
-            <RaisedButton type="submit" label="Fetch Repos" secondary={true}/>
-
+            <TextField
+              id="search"
+              ref="search"
+              placeholder="Hint Text"/>
+            <RaisedButton
+              type="submit"
+              label="Fetch Repos"
+              secondary={true}/>
           </form>
-
         </Paper>
-
         <Paper zDepth={1}>
           <List>
-
-{this.repos()}
-
-
-
-
-
-
-
+            {this.repos()}
           </List>
-
         </Paper>
-
       </div>
-
     );
   }
-
 }
 export default Repos;

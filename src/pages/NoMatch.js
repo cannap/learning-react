@@ -6,7 +6,7 @@ class NoMatch extends Component {
         super()
     }
     render() {
-        return (          
+        return (
             <div className="notfound">404</div>
         );
     }

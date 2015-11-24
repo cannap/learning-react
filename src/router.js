@@ -10,11 +10,12 @@ export default() => {
   return(
     <Router history={createBrowserHistory()}>
       <Route name="home" path="/" component={App}>
-        <Route name="repos" path="repos" component={Repos}></Route>
-
+        <Route
+          name="repos"
+          path="repos"
+          component={Repos}>
+        </Route>
       </Route>
       <Route path="*" component={NoMatch}/>
     </Router>
-  )
-
-}
+)}

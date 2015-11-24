@@ -7,7 +7,7 @@ export class App extends Component {
     return (
       <div>
         <Header/>
-              
+
         {this.props.children}
       </div>
     );
